@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>HOME</title>
+		<link rel="stylesheet" href="CSS/style.css">
+		<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+		<meta name="viewport" content="width=deivde-width, initial-scale=1.0">
+	</head>
+
+<body>
+	<div class="sidebar">
+		<div class="logo-details">
+			
+			<i class='bx bxs-component icon'></i>
+			<div class="logo_name">Proyect ToDo</div>
+			<i class="bx bx-menu" id="btn"></i>
+			
+			
+		</div>
+		<ul class="nav_list">
+			
+			<li>
+			
+				<i class="bx bx-search" ></i>
+				<input type="text" placeholder="Buscar">
+			
+			<span class="tooltip">Buscar</span> 
+		</li>
+			
+			
+					<li>
+			<a href="#">
+				<i class="bx bxs-home" ></i>
+				<span class="links_name">Home</span>
+			</a>
+			 <span class="tooltip">Home</span> 
+		</li>
+			
+			
+			
+		<li>
+			<a href="#">
+				<i class="bx bxs-user"></i>
+				<span class="links_name">Perfil</span>
+			</a>
+			<span class="tooltip">Perfil</span> 
+		</li>
+		
+			
+			<li>
+			<a href="#">
+				<i class="bx bxs-book-alt"></i>
+				<span class="links_name">Proyectos</span>
+			</a>
+			<span class="tooltip">Proyectos</span> 
+		</li>
+			
+			
+					<li>
+			<a href="#">
+				<i class="bx bx-book-alt"></i>
+				<span class="links_name">Tareas</span>
+			</a>
+			<span class="tooltip">Tareas</span> 
+		</li>
+			
+			
+					<li>
+			<a href="#">
+				<i class="bx bxs-book-add" ></i>
+				<span class="links_name">Proyecto Nuevo</span>
+			</a>
+			 <span class="tooltip">Proyecto Nuevo</span> 
+		</li>
+			
+			
+					<li>
+			<a href="#">
+				<i class="bx bx-log-out" ></i>
+				<span class="links_name">Cerrar Sesion</span>
+			</a>
+			<span class="tooltip">Cerrar Sesion</span> 
+		</li>
+		
+		</ul>
+	</div>
+	<section class="home-section">
+      <div class="text">Proyect ToDo</div>
+  </section>
+  <script>
+  let sidebar = document.querySelector(".sidebar");
+  let closeBtn = document.querySelector("#btn");
+  let searchBtn = document.querySelector(".bx-search");
+
+  closeBtn.addEventListener("click", ()=>{
+    sidebar.classList.toggle("open");
+    menuBtnChange();
+  });
+
+  searchBtn.addEventListener("click", ()=>{ 
+    sidebar.classList.toggle("open");
+    menuBtnChange(); 
+  });
+
+ 
+  function menuBtnChange() {
+   if(sidebar.classList.contains("open")){
+     closeBtn.classList.replace("bx-menu", "bx-menu-alt-right");
+   }else {
+     closeBtn.classList.replace("bx-menu-alt-right","bx-menu");
+   }
+  }
+  </script>
+</body>
+</html>
